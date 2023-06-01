@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, nixpkgs, ... }:
 
 {
   system.build = rec {
@@ -39,7 +39,7 @@
     mkdir -p /mnt-root/root/.ssh/
     cp /authorized_keys /mnt-root/root/.ssh/
   '';
-  system.build.kexec_tarball = pkgs.callPackage <nixpkgs/nixos/lib/make-system-tarball.nix> {
+  system.build.kexec_tarball = pkgs.callPackage (nixpkgs + "/nixos/lib/make-system-tarball.nix") {
     storeContents = [
       { object = config.system.build.kexec_script; symlink = "/kexec_nixos"; }
     ];
