@@ -1,0 +1,5 @@
+{ lib, pkgs, config, ... }:
+{
+  users.users.root.openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEk86JXtGNSX/ocSLM6QGJxGGleYaklqPx5/r4ljCBZMHIQc7HETTVHqO0DG4ALaYYqQnTlg+71oHmTtFbOP519doWrLcltlJxT9uwRArAH3CIs86PWlu4hAfh98WKmKRBA4G/cICfVGia161dsmQ8lWRnAyZKpMfSgSjwDcGi3R8SqY1AMJmsmEakG2J6kMuqBHaOiD22BPOhHysb94ttsiVz2ILg42GJByUKfhVE0B/bjWSOXLxRzXfGq2bVPjhIVOtzWnaL9CP0KUg8dpcRcjS2x0Ar70hVm9E/vB1xVl9P+T+KbIRV60Hxdo/aeuh6GbKZmJsbDYQ33Jx7SctoyV0vk/qfQWwb921NawHhWSnlgAczgyy/0yMnYzIC98m3UCAmZwQlekySh9N6+skI9p5hqTupA1sqMtidKMpu7NDJ3kV5FwDFrGnRipHoL1HntZy+rh0XbGqk7Tyzahol9Xd22cMOc3bV6R3p7PcmC7xlQiHYybjiRq+kIFuL5dM= maarten@MacBook-Pro.hof7" ];
+}
+
