@@ -8,4 +8,6 @@ else
 fi
 
 bash -c "nix build --extra-experimental-features 'nix-command flakes' .#nixosConfigurations.kexec_installer.config.system.build.kexec_tarball"
+tar -xf ./result/tarball/nixos-system-x86_64-linux.tar.xz
+./kexec_nixos
 
