@@ -1,9 +1,9 @@
-{ lib, pkgs, config, ... }:
+{ lib, nixpkgs, pkgs, config, ... }:
 
 with lib;
 
 {
-  imports = [ (pkgs + "/nixos/modules/installer/netboot/netboot-minimal.nix") ./kexec.nix ];
+  imports = [ (nixpkgs + "/nixos/modules/installer/netboot/netboot-minimal.nix") ./kexec.nix ];
 
   boot.supportedFilesystems = [ "zfs" ];
   boot.loader.grub.enable = false;
