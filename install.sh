@@ -9,6 +9,6 @@ else
   exit 1
 fi
 
-nix build --extra-experimental-features 'nix-command flakes' .#nixosConfigurations.kexec_installer.config.system.build.kexec_tarball
-tar -xf ./result/tarball/nixos-system-x86_64-linux.tar.xz
-./kexec_nixos
+nix flake --experimental-features 'nix-command flakes' update
+nix build --experimental-features 'nix-command flakes' .#nixosConfigurations.kexec_installer.config.system.build.kexec_script
+./result
